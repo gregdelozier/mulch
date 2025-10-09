@@ -1,0 +1,17 @@
+name: Example Workflow
+
+on: 
+  workflow_dispatch:
+    
+jobs:
+   example_workflow:
+     runs-on: ubuntu-latest
+     steps:
+       - name: Get our files
+         uses: actions/checkout@v2
+       - name: Check out the VM
+         run: |
+           echo $ ls -la
+           ls -la
+           echo $ whoami
+           whoami 
