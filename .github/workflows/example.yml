@@ -29,7 +29,9 @@ jobs:
           ssh mulch@cassini.cs.kent.edu whoami 
           echo $ ssh mulch@cassini.cs.kent.edu hostname
           ssh mulch@cassini.cs.kent.edu hostname
-          echo $ mulch@cassini.cs.kent.edu:./web/index.html .
-          scp mulch@cassini.cs.kent.edu:./web/index.html .
+          echo $ ssh mulch@cassini.cs.kent.edu mkdir -p ./web
+          ssh mulch@cassini.cs.kent.edu mkdir -p ./web
+          echo $ scp index.html mulch@cassini.cs.kent.edu:./web
+          scp index.html mulch@cassini.cs.kent.edu:./web
 
       
