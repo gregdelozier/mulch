@@ -1,7 +1,8 @@
-name: Test Workflow
+name: Unit Test Workflow
 
 on: 
   workflow_dispatch:
+  push:
 
 env:
   HOST: cassini.cs.kent.edu
@@ -12,7 +13,7 @@ env:
 
     
 jobs:
-  test_workflow:
+  unit_test_workflow:
     runs-on: ubuntu-latest
     steps:
       - name: Get our files
