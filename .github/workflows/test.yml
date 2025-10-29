@@ -1,4 +1,4 @@
-name: Example Workflow
+name: Tes Workflow
 
 on: 
   workflow_dispatch:
@@ -12,7 +12,7 @@ env:
 
     
 jobs:
-  example_workflow:
+  test_workflow:
     runs-on: ubuntu-latest
     steps:
       - name: Get our files
