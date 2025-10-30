@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
-import { addNumbers } from './src/addNumbers.js';
+import { addNumbers } from './src/calcNumbers.js';
+import { multiplyNumbers } from './src/calcNumbers.js';
 
 // Simple test runner using Node's built-in assert
 function test(name, fn) {
@@ -32,6 +33,14 @@ test('large numbers', () => {
 test('nan propagation', () => {
 	const r = addNumbers(NaN, 1);
 	assert.ok(Number.isNaN(r));
+});
+
+test('multiplication', () => {  
+	assert.strictEqual(multiplyNumbers(2, 3), 6);
+	assert.strictEqual(multiplyNumbers(2.5, 4), 10);
+	assert.strictEqual(multiplyNumbers(-1, 1), -1);
+	assert.strictEqual(multiplyNumbers(1e20, 1e20), 1e40);
+	assert.ok(Number.isNaN(multiplyNumbers(NaN, 1)));
 });
 
 console.log('All tests completed.');
