@@ -28,8 +28,8 @@ jobs:
           ls -la
           echo $ whoami
           whoami 
-      - name: Test the addition library on the VM
+      - name: Test the numbers library on the VM
         run: |
-          node test_addNumbers.js
+          node test_calcNumbers.js
     
       
